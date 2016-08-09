@@ -11,14 +11,14 @@ import java.time.*;
 public class EventKiosk
 {
     // instance variables - replace the example below with your own
-    private ArrayList <Event> eventList = new ArrayList <Event>(50);
+    private ArrayList <Event> eventList = new ArrayList <Event>();
     
     private int noOfEvents,noOfRegistrations,noOfUsers;
     
     
-    private ArrayList<Registration> registrationList= new ArrayList<Registration>(500);
+    private ArrayList<Registration> registrationList= new ArrayList<Registration>();
     
-    private ArrayList<User> userList = new ArrayList<User> (500);
+    private ArrayList<User> userList = new ArrayList<User> ();
     
     
     public EventKiosk()
@@ -93,8 +93,7 @@ public class EventKiosk
         
         if(!contain)
         {
-            
-        
+           
             return -1;
         }
         return registrationList.get(i).addEvents(events);
