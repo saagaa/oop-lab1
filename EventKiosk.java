@@ -101,4 +101,28 @@ public class EventKiosk
        
     }
     
+    
+    private int addEvents( String username,  Event[] events)
+    {
+        int i=0;
+        boolean contain=false;
+        for( User register : userList)
+        {
+            if(register.getName().equals(username))
+            {    contain=true;
+                break;
+            }
+            i++;
+        }
+        if(contain){
+        
+        return registrationList.get(i).addEvents(events);
+        }
+        
+        else{
+                registrationList.add(new Registration( new User(username," ", LocalDate.now()),events));
+               return -1;
+            }
+    
+    }
 }

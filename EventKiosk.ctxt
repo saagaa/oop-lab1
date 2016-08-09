@@ -9,4 +9,6 @@ comment3.params=username\ events
 comment3.target=int\ registerUser(java.lang.String,\ Event[])
 comment4.params=username\ events
 comment4.target=int\ createRegistration(java.lang.String,\ Event[])
-numComments=5
+comment5.params=username\ events
+comment5.target=int\ addEvents(java.lang.String,\ Event[])
+numComments=6
