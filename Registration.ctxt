@@ -1,8 +1,13 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Registration()
+comment0.params=usr
+comment0.target=Registration(User)
 comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Registration\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-numComments=2
+comment1.params=usr\ events
+comment1.target=Registration(User,\ Event[])
+comment2.params=events
+comment2.target=int\ addEvents(Event[])
+comment3.params=eventName
+comment3.target=boolean\ isEventRegistered(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getUserName()
+numComments=5

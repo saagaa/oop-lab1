@@ -5,29 +5,77 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+import java.util.*;
+
 public class Registration
 {
-    // instance variables - replace the example below with your own
-    private Event[] eventsRegistered ;
-
+    
+    private ArrayList <Event> eventsRegistered =new ArrayList <Event>();
+    private int noOfEvents;
+    private User user;
     /**
      * Constructor for objects of class Registration
      */
-    public Registration()
+    public Registration(User usr)
     {
-        // initialise instance variables
-     //   x = 0;
+        user=usr;
+        noOfEvents=-1;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public Registration(User usr,Event[] events)
     {
-        // put your code here
-        return  y;
+        user=usr;
+        noOfEvents=-1;
+        addEvents(events);
+    }
+    
+    public int addEvents(Event[] events)
+    {
+        int check=0,added=0;
+        for(Event my_event : events )
+        {
+            
+            
+            
+            if(eventsRegistered.contains(my_event) )
+            {
+                check=1;
+            }
+            else{
+                added++;
+                eventsRegistered.add(my_event);
+            }
+            
+            
+
+            
+        }
+        
+        
+        return added;
+    }
+    
+    
+    public boolean isEventRegistered(String eventName)
+    {
+        boolean ans=false;
+        for(Event my_event : eventsRegistered)
+        {
+            if(my_event.getName().equals(eventName))
+            {
+                   ans=true;
+            }
+        }
+        
+        return ans;
+    }
+    
+    
+    
+    public String getUserName()
+    {
+    
+        return user.getName();
     }
 }
