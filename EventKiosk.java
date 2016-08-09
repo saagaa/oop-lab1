@@ -51,16 +51,22 @@ public class EventKiosk
     public int registerUser(String username,Event[] events)
     {
         int i=0;
+        boolean contain=false;
         for( Registration register : registrationList)
         {
             if(register.getUserName().equals(username))
-            {   
+            {    contain=true;
                 break;
             }
             i++;
         }
+        if(contain){
         
         return registrationList.get(i).addEvents(events);
+        }
+        
+        else{
+            return -1;}
         //user= username;
         
     }
