@@ -66,7 +66,9 @@ public class EventKiosk
         }
         
         else{
-            return -1;}
+               registrationList.add(new Registration( new User(username," ", LocalDate.now()),events));
+               return events.length;
+            }
         //user= username;
         
     }
@@ -91,6 +93,8 @@ public class EventKiosk
         
         if(!contain)
         {
+            
+        
             return -1;
         }
         return registrationList.get(i).addEvents(events);
