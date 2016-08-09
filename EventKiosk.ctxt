@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=EventKiosk()
+comment1.params=name\ cost
+comment1.target=int\ createEvent(java.lang.String,\ double)
+comment1.text=private\ int\ addEvents(\ String\ username,\ Event[]\ events){\n\ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \n}
+comment2.params=name\ email\ dob
+comment2.target=int\ createUser(java.lang.String,\ java.lang.String,\ java.time.LocalDate)
+comment3.params=username\ events
+comment3.target=int\ registerUser(java.lang.String,\ Event[])
+numComments=4
