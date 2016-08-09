@@ -30,11 +30,7 @@ public class EventKiosk
         
     }
     
-    /*private int addEvents( String username, Event[] events){
-        
-        
-    }*/
-    
+  
     int createEvent( String name, double cost)
     {
         eventList.add(new Event(name,cost) );
@@ -69,10 +65,31 @@ public class EventKiosk
         
     }
     
-    /*
+    
+    
     private int createRegistration(String username, Event[] events)
     {
        // Registration x= new Registration(username,events);
-    }*/
+       int i=0;
+       boolean contain=false;
+        for( Registration register : registrationList)
+        {
+            if(register.getUserName().equals(username))
+            {
+                contain=true;
+                break;
+            }
+            
+            i++;
+        }
+        
+        if(!contain)
+        {
+            return -1;
+        }
+        return registerUser(username ,events);
+        
+       
+    }
     
 }
