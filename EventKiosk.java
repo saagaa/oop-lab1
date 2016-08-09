@@ -93,7 +93,7 @@ public class EventKiosk
         {
             return -1;
         }
-        return registerUser(username ,events);
+        return registrationList.get(i).addEvents(events);
         
        
     }
